@@ -6,12 +6,11 @@ After=network.target
 Type=simple
 RemainAfterExit=yes
 User=deploy
-PIDFile=/home/deploy/datausa-mondrian/watch-mondrian-schema.pid
-WorkingDirectory=/home/deploy/datausa-mondrian
+PIDFile=/home/deploy/oec-mondrian/watch-mondrian-schema.pid
+WorkingDirectory=/home/deploy/oec-mondrian
 ExecStart=/usr/bin/watchexec -w frags '/home/deploy/.cargo/bin/moncat --dir frags -o schema.xml'
 TimeoutSec=300
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-
