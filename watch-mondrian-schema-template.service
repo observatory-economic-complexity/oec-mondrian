@@ -1,0 +1,17 @@
+[Unit]
+Description=Watch Mondrian Schema fragments folder and cat to schema file
+After=network.target
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+User=deploy
+PIDFile=/home/deploy/datausa-mondrian/watch-mondrian-schema.pid
+WorkingDirectory=/home/deploy/datausa-mondrian
+ExecStart=/usr/bin/watchexec -w frags '/home/deploy/.cargo/bin/moncat --dir frags -o schema.xml'
+TimeoutSec=300
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

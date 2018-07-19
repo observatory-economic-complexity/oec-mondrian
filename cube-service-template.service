@@ -1,0 +1,17 @@
+[Unit]
+Description=datausa Mondrian REST
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+User=deploy
+Environment="MONDRIAN_REST_SECRET=xxx"
+Environment=JRUBY_OPTS=--server 'JAVA_OPTS=-Xmn512m -Xms2048m -Xmx2048m -Dlog4j.configuration=file:log4j.properties -Dmondrian.rolap.aggregates.Use=true -Dmondrian.rolap.aggregates.Read=true -Dmondrian.rolap.nonempty=true -Dmondrian.olap.SsasCompatibleNaming=true'
+PIDFile=/home/deploy/datausa-acs-temp/mondrian/datausa-mondrian.pid
+WorkingDirectory=/home/deploy/datausa-acs-temp/mondrian
+ExecStart=/home/deploy/.rvm/bin/datausa-acs_bundle exec puma -b tcp://0.0.0.0:5000
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
+
