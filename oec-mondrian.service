@@ -7,7 +7,7 @@ RemainAfterExit=yes
 User=deploy
 Environment="MONDRIAN_REST_SECRET=xxx"
 Environment=JRUBY_OPTS=--server 'JAVA_OPTS=-Xmn512m -Xms2048m -Xmx2048m -Dlog4j.configuration=file:log4j.properties -Dmondrian.rolap.aggregates.Use=true -Dmondrian.rolap.aggregates.Read=true -Dmondrian.rolap.nonempty=true -Dmondrian.olap.SsasCompatibleNaming=true'
-PIDFile=/home/deploy/oec-mondrian/cube.pid
+PIDFile=/home/deploy/oec-mondrian/oec-mondrian.pid
 WorkingDirectory=/home/deploy/oec-mondrian
 ExecStart=/home/deploy/.rvm/gems/jruby-9.2.0.0/wrappers/bundle exec puma -b tcp://0.0.0.0:9292
 TimeoutSec=300
