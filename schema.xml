@@ -392,12 +392,9 @@
            </Hierarchy>
         </Dimension>
 
-        <!-- Foreign key -->
         <DimensionUsage name="Country" caption="Country" source="Countries"
-                        foreignKey="country" />
+                        foreignKey="origin_id" />
 
-        <!-- These are not all the fields, so I am assuming these are only the
-        ones we want to aggregate by. -->
         <Measure name="eci" column="eci" aggregator="sum" />
         <Measure name="population" column="population" aggregator="sum" />
         <Measure name="gdp" column="gdp" aggregator="sum" />
