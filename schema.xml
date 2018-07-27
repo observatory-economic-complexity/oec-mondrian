@@ -4,8 +4,8 @@
     <Dimension name="Countries">
         <Hierarchy hasAll="true" primaryKey="id_num">
             <Table name="countries" schema="oec" />
-            <!-- <Level name="Continent" column="continent" nameColumn="continent" -->
-                   <!-- uniqueMembers="true" /> -->
+            <Level name="Continent" column="continent_id" nameColumn="en_continent_name"
+                   uniqueMembers="true" />
             <Level name="Country" column="id" nameColumn="en_name" uniqueMembers="true">
                 <Property column="ar_name" name="Country AR" />
                 <Property column="de_name" name="Country DE" />
@@ -30,7 +30,7 @@
     </Dimension>
 
     <Dimension name="HS92">
-        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_name">
+        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_en_name">
             <Table name="hs92" schema="oec" />
 
             <Level name="Chapter" column="chapter" nameColumn="chapter_en_name"
@@ -118,10 +118,10 @@
     </Dimension>
 
     <Dimension name="HS96">
-        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_name">
+        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_en_name">
             <Table name="hs96" schema="oec" />
 
-            <Level name="Chapter" column="chapter" nameColumn="chapter_name"
+            <Level name="Chapter" column="chapter" nameColumn="chapter_en_name"
                    uniqueMembers="false">
                 <Property column="chapter_ar_name" name="Chapter AR" />
                 <Property column="chapter_de_name" name="Chapter DE" />
@@ -142,7 +142,7 @@
                 <Property column="chapter_vi_name" name="Chapter VI" />
                 <Property column="chapter_zh_name" name="Chapter ZH" />
             </Level>
-            <Level name="HS2" column="hs2" nameColumn="hs2_name" uniqueMembers="false">
+            <Level name="HS2" column="hs2" nameColumn="hs2_en_name" uniqueMembers="false">
                 <Property column="hs2_ar_name" name="HS2 AR" />
                 <Property column="hs2_de_name" name="HS2 DE" />
                 <Property column="hs2_el_name" name="HS2 EL" />
@@ -162,7 +162,7 @@
                 <Property column="hs2_vi_name" name="HS2 VI" />
                 <Property column="hs2_zh_name" name="HS2 ZH" />
             </Level>
-            <Level name="HS4" column="hs4" nameColumn="hs4_name" uniqueMembers="false">
+            <Level name="HS4" column="hs4" nameColumn="hs4_en_name" uniqueMembers="false">
                 <Property column="hs4_ar_name" name="HS4 AR" />
                 <Property column="hs4_de_name" name="HS4 DE" />
                 <Property column="hs4_el_name" name="HS4 EL" />
@@ -182,7 +182,7 @@
                 <Property column="hs4_vi_name" name="HS4 VI" />
                 <Property column="hs4_zh_name" name="HS4 ZH" />
             </Level>
-            <Level name="HS6" column="hs6" nameColumn="hs6_name" uniqueMembers="true">
+            <Level name="HS6" column="hs6" nameColumn="hs6_en_name" uniqueMembers="true">
                 <Property column="hs6_ar_name" name="HS6 AR" />
                 <Property column="hs6_de_name" name="HS6 DE" />
                 <Property column="hs6_el_name" name="HS6 EL" />
@@ -206,10 +206,10 @@
     </Dimension>
 
     <Dimension name="HS02">
-        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_name">
+        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_en_name">
             <Table name="hs02" schema="oec" />
 
-            <Level name="Chapter" column="chapter" nameColumn="chapter_name"
+            <Level name="Chapter" column="chapter" nameColumn="chapter_en_name"
                    uniqueMembers="false">
                 <Property column="chapter_ar_name" name="Chapter AR" />
                 <Property column="chapter_de_name" name="Chapter DE" />
@@ -230,7 +230,7 @@
                 <Property column="chapter_vi_name" name="Chapter VI" />
                 <Property column="chapter_zh_name" name="Chapter ZH" />
             </Level>
-            <Level name="HS2" column="hs2" nameColumn="hs2_name" uniqueMembers="false">
+            <Level name="HS2" column="hs2" nameColumn="hs2_en_name" uniqueMembers="false">
                 <Property column="hs2_ar_name" name="HS2 AR" />
                 <Property column="hs2_de_name" name="HS2 DE" />
                 <Property column="hs2_el_name" name="HS2 EL" />
@@ -250,7 +250,7 @@
                 <Property column="hs2_vi_name" name="HS2 VI" />
                 <Property column="hs2_zh_name" name="HS2 ZH" />
             </Level>
-            <Level name="HS4" column="hs4" nameColumn="hs4_name" uniqueMembers="false">
+            <Level name="HS4" column="hs4" nameColumn="hs4_en_name" uniqueMembers="false">
                 <Property column="hs4_ar_name" name="HS4 AR" />
                 <Property column="hs4_de_name" name="HS4 DE" />
                 <Property column="hs4_el_name" name="HS4 EL" />
@@ -270,7 +270,7 @@
                 <Property column="hs4_vi_name" name="HS4 VI" />
                 <Property column="hs4_zh_name" name="HS4 ZH" />
             </Level>
-            <Level name="HS6" column="hs6" nameColumn="hs6_name" uniqueMembers="true">
+            <Level name="HS6" column="hs6" nameColumn="hs6_en_name" uniqueMembers="true">
                 <Property column="hs6_ar_name" name="HS6 AR" />
                 <Property column="hs6_de_name" name="HS6 DE" />
                 <Property column="hs6_el_name" name="HS6 EL" />
@@ -294,10 +294,10 @@
     </Dimension>
 
     <Dimension name="HS07">
-        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_name">
+        <Hierarchy hasAll="true" primaryKey="hs6" uniqueKeyLevelName="hs6_en_name">
             <Table name="hs07" schema="oec" />
 
-            <Level name="Chapter" column="chapter" nameColumn="chapter_name"
+            <Level name="Chapter" column="chapter" nameColumn="chapter_en_name"
                    uniqueMembers="false">
                 <Property column="chapter_ar_name" name="Chapter AR" />
                 <Property column="chapter_de_name" name="Chapter DE" />
@@ -318,7 +318,7 @@
                 <Property column="chapter_vi_name" name="Chapter VI" />
                 <Property column="chapter_zh_name" name="Chapter ZH" />
             </Level>
-            <Level name="HS2" column="hs2" nameColumn="hs2_name" uniqueMembers="false">
+            <Level name="HS2" column="hs2" nameColumn="hs2_en_name" uniqueMembers="false">
                 <Property column="hs2_ar_name" name="HS2 AR" />
                 <Property column="hs2_de_name" name="HS2 DE" />
                 <Property column="hs2_el_name" name="HS2 EL" />
@@ -338,7 +338,7 @@
                 <Property column="hs2_vi_name" name="HS2 VI" />
                 <Property column="hs2_zh_name" name="HS2 ZH" />
             </Level>
-            <Level name="HS4" column="hs4" nameColumn="hs4_name" uniqueMembers="false">
+            <Level name="HS4" column="hs4" nameColumn="hs4_en_name" uniqueMembers="false">
                 <Property column="hs4_ar_name" name="HS4 AR" />
                 <Property column="hs4_de_name" name="HS4 DE" />
                 <Property column="hs4_el_name" name="HS4 EL" />
@@ -358,7 +358,7 @@
                 <Property column="hs4_vi_name" name="HS4 VI" />
                 <Property column="hs4_zh_name" name="HS4 ZH" />
             </Level>
-            <Level name="HS6" column="hs6" nameColumn="hs6_name" uniqueMembers="true">
+            <Level name="HS6" column="hs6" nameColumn="hs6_en_name" uniqueMembers="true">
                 <Property column="hs6_ar_name" name="HS6 AR" />
                 <Property column="hs6_de_name" name="HS6 DE" />
                 <Property column="hs6_el_name" name="HS6 EL" />
@@ -385,7 +385,7 @@
     <Cube name="attr_yo">
         <Table name="attr_yo" schema="oec" />
 
-        <Dimension name="year" type="TimeDimension">
+        <Dimension name="Year" type="TimeDimension">
            <Hierarchy hasAll="true" primaryKey="year">
                <Level column="year" name="year" levelType="TimeYears" type="Numeric"
                       uniqueMembers="true" />
@@ -413,7 +413,7 @@
     <Cube name="hs92_yearly_data">
         <Table name="hs92_yearly_data" schema="oec" />
 
-        <Dimension name="year" type="TimeDimension">
+        <Dimension name="Year" type="TimeDimension">
            <Hierarchy hasAll="true" primaryKey="year">
                <Level column="year" name="year" levelType="TimeYears" type="Numeric"
                       uniqueMembers="true" />
@@ -522,12 +522,339 @@
         </CalculatedMember>
     </Cube>
 
-    <!-- <Cube name="hs96_yearly_data">
+    <Cube name="hs96_yearly_data">
+        <Table name="hs96_yearly_data" schema="oec" />
+
+        <Dimension name="Year" type="TimeDimension">
+           <Hierarchy hasAll="true" primaryKey="year">
+               <Level column="year" name="year" levelType="TimeYears" type="Numeric"
+                      uniqueMembers="true" />
+           </Hierarchy>
+        </Dimension>
+
+        <DimensionUsage name="Origin Country" caption="Origin Country" source="Countries"
+                        foreignKey="origin_id" />
+        <DimensionUsage name="Destination Country" caption="Destination Country"
+                        source="Countries" foreignKey="destination_id" />
+        <DimensionUsage name="Product" source="HS96" foreignKey="hs96_id" />
+
+        <Measure name="Exports" column="export_val" aggregator="sum" />
+        <Measure name="Imports" column="import_val" aggregator="sum" />
+
+        <!-- Export RCA -->
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_b_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].CurrentMember,
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS96].[All HS96s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_c_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS96].CurrentMember)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_d_pop" visible="false">
+             <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS96].[All HS96s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="Export RCA" visible="true">
+            <Formula>
+                <![CDATA[
+                IIF([Measures].[export_cpy_rca_c_pop] > 0 and [Measures].[export_cpy_rca_d_pop] > 0,
+                 ([Measures].[Exports] / [Measures].[export_cpy_rca_b_pop]) /
+                 ([Measures].[export_cpy_rca_c_pop] / [Measures].[export_cpy_rca_d_pop])
+                 , NULL)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <!-- Import RCA -->
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_b_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].CurrentMember,
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS96].[All HS96s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_c_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS96].CurrentMember)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_d_pop" visible="false">
+             <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS96].[All HS96s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="Import RCA" visible="true">
+            <Formula>
+                <![CDATA[
+                IIF([Measures].[import_cpy_rca_c_pop] > 0 and [Measures].[import_cpy_rca_d_pop] > 0,
+                 ([Measures].[Imports] / [Measures].[import_cpy_rca_b_pop]) /
+                 ([Measures].[import_cpy_rca_c_pop] / [Measures].[import_cpy_rca_d_pop])
+                 , NULL)
+                ]]>
+            </Formula>
+        </CalculatedMember>
     </Cube>
 
     <Cube name="hs02_yearly_data">
+        <Table name="hs02_yearly_data" schema="oec" />
+
+        <Dimension name="Year" type="TimeDimension">
+           <Hierarchy hasAll="true" primaryKey="year">
+               <Level column="year" name="year" levelType="TimeYears" type="Numeric"
+                      uniqueMembers="true" />
+           </Hierarchy>
+        </Dimension>
+
+        <DimensionUsage name="Origin Country" caption="Origin Country" source="Countries"
+                        foreignKey="origin_id" />
+        <DimensionUsage name="Destination Country" caption="Destination Country"
+                        source="Countries" foreignKey="destination_id" />
+        <DimensionUsage name="Product" source="HS02" foreignKey="hs02_id" />
+
+        <Measure name="Exports" column="export_val" aggregator="sum" />
+        <Measure name="Imports" column="import_val" aggregator="sum" />
+
+        <!-- Export RCA -->
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_b_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].CurrentMember,
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS02].[All HS02s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_c_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS02].CurrentMember)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_d_pop" visible="false">
+             <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS02].[All HS02s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="Export RCA" visible="true">
+            <Formula>
+                <![CDATA[
+                IIF([Measures].[export_cpy_rca_c_pop] > 0 and [Measures].[export_cpy_rca_d_pop] > 0,
+                 ([Measures].[Exports] / [Measures].[export_cpy_rca_b_pop]) /
+                 ([Measures].[export_cpy_rca_c_pop] / [Measures].[export_cpy_rca_d_pop])
+                 , NULL)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <!-- Import RCA -->
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_b_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].CurrentMember,
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS02].[All HS02s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_c_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS02].CurrentMember)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_d_pop" visible="false">
+             <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS02].[All HS02s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="Import RCA" visible="true">
+            <Formula>
+                <![CDATA[
+                IIF([Measures].[import_cpy_rca_c_pop] > 0 and [Measures].[import_cpy_rca_d_pop] > 0,
+                 ([Measures].[Imports] / [Measures].[import_cpy_rca_b_pop]) /
+                 ([Measures].[import_cpy_rca_c_pop] / [Measures].[import_cpy_rca_d_pop])
+                 , NULL)
+                ]]>
+            </Formula>
+        </CalculatedMember>
     </Cube>
 
     <Cube name="hs07_yearly_data">
-    </Cube> -->
+        <Table name="hs07_yearly_data" schema="oec" />
+
+        <Dimension name="Year" type="TimeDimension">
+           <Hierarchy hasAll="true" primaryKey="year">
+               <Level column="year" name="year" levelType="TimeYears" type="Numeric"
+                      uniqueMembers="true" />
+           </Hierarchy>
+        </Dimension>
+
+        <DimensionUsage name="Origin Country" caption="Origin Country" source="Countries"
+                        foreignKey="origin_id" />
+        <DimensionUsage name="Destination Country" caption="Destination Country"
+                        source="Countries" foreignKey="destination_id" />
+        <DimensionUsage name="Product" source="HS07" foreignKey="hs07_id" />
+
+        <Measure name="Exports" column="export_val" aggregator="sum" />
+        <Measure name="Imports" column="import_val" aggregator="sum" />
+
+        <!-- Export RCA -->
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_b_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].CurrentMember,
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS07].[All HS07s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_c_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS07].CurrentMember)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="export_cpy_rca_d_pop" visible="false">
+             <Formula>
+                <![CDATA[
+                    (Measures.[Exports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS07].[All HS07s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="Export RCA" visible="true">
+            <Formula>
+                <![CDATA[
+                IIF([Measures].[export_cpy_rca_c_pop] > 0 and [Measures].[export_cpy_rca_d_pop] > 0,
+                 ([Measures].[Exports] / [Measures].[export_cpy_rca_b_pop]) /
+                 ([Measures].[export_cpy_rca_c_pop] / [Measures].[export_cpy_rca_d_pop])
+                 , NULL)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <!-- Import RCA -->
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_b_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].CurrentMember,
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS07].[All HS07s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_c_pop" visible="false">
+            <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS07].CurrentMember)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="import_cpy_rca_d_pop" visible="false">
+             <Formula>
+                <![CDATA[
+                    (Measures.[Imports], [year].[year].CurrentMember,
+            [Origin Country].[Countries].[All Countriess],
+            [Destination Country].[Countries].[All Countriess],
+            [Product].[HS07].[All HS07s])
+                ]]>
+            </Formula>
+        </CalculatedMember>
+
+        <CalculatedMember dimension="Measures" name="Import RCA" visible="true">
+            <Formula>
+                <![CDATA[
+                IIF([Measures].[import_cpy_rca_c_pop] > 0 and [Measures].[import_cpy_rca_d_pop] > 0,
+                 ([Measures].[Imports] / [Measures].[import_cpy_rca_b_pop]) /
+                 ([Measures].[import_cpy_rca_c_pop] / [Measures].[import_cpy_rca_d_pop])
+                 , NULL)
+                ]]>
+            </Formula>
+        </CalculatedMember>
+    </Cube>
 </Schema>
