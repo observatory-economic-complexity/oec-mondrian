@@ -2,7 +2,7 @@
 <Schema name="atlas">
 
     <Dimension name="Countries">
-        <Hierarchy hasAll="true" primaryKey="id_num">
+        <Hierarchy hasAll="true" primaryKey="id_3char">
             <Table name="countries" schema="oec" />
             <Level name="Continent" column="continent_id" nameColumn="en_continent_name"
                    uniqueMembers="true" />
